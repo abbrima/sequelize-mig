@@ -33,12 +33,7 @@ const make = async (argv) => {
 
   if (argv.preview) {
     log(3, 'Migration result:');
-    log(
-      3,
-      prettier.format(`[ \n${migration.commandsUp.join(', \n')} \n];\n`, {
-        parser: 'babel',
-      }),
-    );
+    log(3, prettier.format(`[ \n${migration.commandsUp.join(', \n')} \n];\n`));
     return;
   }
 
